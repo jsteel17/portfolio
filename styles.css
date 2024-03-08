@@ -20,6 +20,10 @@ p {
     font-size: 16px;
 }
 
+a {
+    text-decoration: none;
+}
+
 li {
     list-style-type: none;
 }
@@ -55,7 +59,6 @@ align-items: center;
 .nav__link--anchor {
     margin: 0 12px;
     color: #242424;
-    text-decoration: none;
     font-weight: 700;
 }
 
@@ -150,7 +153,6 @@ padding-top: 8px;
 .about-me__link {
     font-size: 20px;
     color: #242424;
-    text-decoration: none;
     padding: 0 16px;
 }
 
@@ -212,6 +214,14 @@ padding-top: 8px;
 
 /* Projects */
 
+.project {
+    margin-bottom: 135px;
+}
+
+.project:last-child {
+    margin-bottom: 40px;
+}
+
 .project__img {
     width: 100%;
     transition: all 500ms ease;
@@ -247,6 +257,73 @@ padding-top: 8px;
     filter: blur(5px);
 }
 
+.project:hover .project__description {
+    opacity: 1;
+    transform: translateY(-50%);
+}
+
 .project__list {
     padding-top: 40px;
+}
+
+.project__description {
+    position: absolute;
+    top: 50%;
+    left: 90px;
+    transform: translateY(100%);
+    max-width: 550px;
+    z-index: 3;
+    opacity: 0;
+    transition: transform 450ms, opacity 300ms;
+}
+
+.project__description--title {
+    font-size: 40px;
+}
+
+.project__description--para {
+    margin: 16px 0;
+}
+
+.project__description--link {
+    font-size: 20px;
+    margin-right: 16px;
+}
+
+.project__description--title,
+.project__description--sub-title,
+.project__description--para,
+.project__description--link {
+    text-align: left;
+    color: #fff;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #242424;
+}
+
+.footer__logo {
+    margin-bottom: 20px;
+}
+
+
+
+.footer__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8%;
+}
+
+.footer__logo--img {
+    width: 70px;
+    height: 70px;
+}
+
+.footer__social--link,
+.footer__copyright {
+    color: #fff;
 }
